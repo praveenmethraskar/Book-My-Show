@@ -3,10 +3,12 @@ version: "3.7"
 services:
   frontend:
     build:
-      context: .
-      dockerfile: bookmyshow-app/Dockerfile
+       context: ./bookmyshow-app
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
+       environment:
+      - NODE_ENV=production
     networks:
       - app-network
 
