@@ -4,11 +4,9 @@ services:
   frontend:
     build:
        context: ./bookmyshow-app
-      dockerfile: Dockerfile
+       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-       environment:
-      - NODE_ENV=production
     networks:
       - app-network
 
@@ -16,6 +14,3 @@ services:
 networks:
   app-network:
     driver: bridge
-
-volumes:
-  mongo_data:
